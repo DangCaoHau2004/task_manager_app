@@ -8,6 +8,7 @@ import 'package:task_manager_app/providers/user_provider.dart';
 import 'package:task_manager_app/providers/setting.dart';
 import 'firebase_options.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter/services.dart';
 
 var kColorScheme = ColorScheme.fromSeed(
   seedColor: const Color.fromARGB(199, 192, 53, 239),
@@ -21,11 +22,16 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(
-    ProviderScope(
-      child: _MyApp(),
-    ),
-  );
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]).then((_) {
+    runApp(
+      ProviderScope(
+        child: _MyApp(),
+      ),
+    );
+  });
 }
 
 class _MyApp extends ConsumerStatefulWidget {
