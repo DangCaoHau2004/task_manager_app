@@ -221,7 +221,9 @@ class _AllUserScreenState extends ConsumerState<AllUserScreen> {
                                                 const TextStyle(fontSize: 16),
                                           ),
                                         ),
-                                        if (role == "Admin")
+                                        if (role == "Admin" ||
+                                            widget.currentUserData["role"] ==
+                                                "member")
                                           const Expanded(
                                             flex: 1,
                                             child: Text(

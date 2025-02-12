@@ -16,10 +16,14 @@ class HomeScreen extends ConsumerStatefulWidget {
 
 class _HomeScreenState extends ConsumerState<HomeScreen> {
   var defaultPage = 0;
-  var _enterSearch = "";
+  String _enterSearch = "";
 
   void _searchElement() {
     FocusScope.of(context).unfocus();
+    if (_formSearchKey.currentState!.validate()) {
+      _formSearchKey.currentState!.save();
+      navigatorToSearchResult(context, _enterSearch);
+    }
   }
 
   final _formSearchKey = GlobalKey<FormState>();
@@ -66,6 +70,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               key: _formSearchKey,
               child: TextFormField(
                 style: const TextStyle(color: Colors.white),
+                cursorColor: Colors.white,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(40.0),
@@ -83,7 +88,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 ),
                 validator: (value) {
                   if (value == null || value.trim().isEmpty) {
-                    return "Bạn chưa nhập!";
+                    return "You haven't entered anything!";
                   }
                   return null;
                 },

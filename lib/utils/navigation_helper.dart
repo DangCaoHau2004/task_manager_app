@@ -8,6 +8,7 @@ import 'package:task_manager_app/screens/chat/detail_chat.dart';
 import 'package:task_manager_app/screens/forgot_password.dart';
 import 'package:task_manager_app/screens/list_friend.dart';
 import 'package:task_manager_app/screens/profile_orther_user.dart';
+import 'package:task_manager_app/screens/search_result.dart';
 import 'package:task_manager_app/screens/setting.dart';
 import 'package:task_manager_app/screens/tabs.dart';
 import 'package:task_manager_app/screens/home.dart';
@@ -171,6 +172,16 @@ void navigatorToSetting(context) {
 void navigatorToForgotPassword(context) {
   Navigator.of(context).push(
     MaterialPageRoute(builder: (context) => const ForgotPasswordScreen()),
+  );
+}
+
+void navigatorToSearchResult(context, String searchElement) {
+  Navigator.of(context).push(
+    MaterialPageRoute(
+      builder: (context) => SearchResultScreen(
+        searchElement: searchElement,
+      ),
+    ),
   );
 }
 

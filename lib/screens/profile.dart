@@ -190,6 +190,8 @@ class _ProFileScreenState extends ConsumerState<ProfileScreen> {
                   ),
                   IconButton(
                     onPressed: () async {
+                      FocusScope.of(context).unfocus();
+
                       Navigator.of(context).popUntil((route) => route.isFirst);
 
                       await FirebaseAuth.instance.signOut();

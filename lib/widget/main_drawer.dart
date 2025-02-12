@@ -87,6 +87,8 @@ class _MainDrawerState extends ConsumerState<MainDrawer> {
             leading: const Icon(Icons.logout),
             title: const Text("Log out"),
             onTap: () {
+              FocusScope.of(context).unfocus();
+
               FirebaseAuth.instance.signOut();
             },
           ),

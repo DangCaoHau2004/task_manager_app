@@ -239,7 +239,7 @@ class _DetailChatState extends ConsumerState<DetailChat> {
               ),
               validator: (value) {
                 if (value == null || value.trim().isEmpty) {
-                  return "Bạn chưa nhập!";
+                  return "You haven't entered anything!";
                 }
                 return null;
               },

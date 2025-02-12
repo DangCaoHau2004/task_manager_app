@@ -17,12 +17,13 @@ class _AllTaskScreenState extends ConsumerState<AllTaskScreen> {
   String sortData = "end_date";
   bool sortDescending = false;
   String _enterSort = "End date";
-  String? _enterSearch;
+  String _enterSearch = "";
   bool _isSearchHidden = true;
 
   void _searchElement() {
     if (_formSearchKey.currentState!.validate()) {
       _formSearchKey.currentState!.save();
+      navigatorToSearchResult(context, _enterSearch);
     }
   }
 
@@ -65,7 +66,6 @@ class _AllTaskScreenState extends ConsumerState<AllTaskScreen> {
                                     : _enterSort == "Start date"
                                         ? "start_date"
                                         : "task_name";
-                                print(sortData);
                               },
                             );
                           }
@@ -107,7 +107,8 @@ class _AllTaskScreenState extends ConsumerState<AllTaskScreen> {
               Form(
                 key: _formSearchKey,
                 child: TextFormField(
-                  style: const TextStyle(color: Colors.white),
+                  style:
+                      TextStyle(color: Theme.of(context).colorScheme.primary),
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(40.0),
@@ -121,12 +122,12 @@ class _AllTaskScreenState extends ConsumerState<AllTaskScreen> {
                   ),
                   validator: (value) {
                     if (value == null || value.trim().isEmpty) {
-                      return "Bạn chưa nhập!";
+                      return "You haven't entered anything!";
                     }
                     return null;
                   },
                   onSaved: (value) {
-                    _enterSearch = value;
+                    _enterSearch = value.toString();
                   },
                 ),
               ),
