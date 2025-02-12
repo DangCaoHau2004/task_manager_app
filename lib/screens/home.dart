@@ -76,7 +76,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     borderRadius: BorderRadius.circular(40.0),
                     borderSide: const BorderSide(color: Colors.black),
                   ),
-                  hintText: "Search...",
+                  hintText: "Search task...",
                   hintStyle: const TextStyle(color: Colors.white),
                   suffixIcon: IconButton(
                     onPressed: _searchElement,

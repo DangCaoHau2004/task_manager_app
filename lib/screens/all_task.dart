@@ -114,7 +114,7 @@ class _AllTaskScreenState extends ConsumerState<AllTaskScreen> {
                       borderRadius: BorderRadius.circular(40.0),
                       borderSide: const BorderSide(color: Colors.black),
                     ),
-                    hintText: "Search...",
+                    hintText: "Search task...",
                     suffixIcon: IconButton(
                       onPressed: _searchElement,
                       icon: const Icon(Icons.search),
