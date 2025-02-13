@@ -10,7 +10,7 @@ Task Manager App là một dự án quản lí công việc cho một cá nhân 
 - **Sửa và xóa task:** Mỗi task có thể sửa và xóa thông tin task, thêm người dùng, sửa quyền người dùng một cách dễ dàng.
 - **Sắp xếp và tìm kiếm:** Sắp xếp các task theo ngày kết thúc, ngày bắt đầu, tên của task và chức năng tìm kiếm theo tên.
 - **Thông báo:** App có chức năng thông báo nội bộ trong app, không có thông báo trên ngoài màn hình app.
-- **Kết bạn và chat cơ bản:** App có chức năng kết bạn và chat với người khác (chức năng chat còn hạn chế chỉ chat được chữ).
+- **Kết bạn và chat cơ bản:** App có chức năng kết bạn và chat với người khác.
 - **Một vài chức năng khác tích hợp từ firebase auth:** Quên mật khẩu, đăng nhập, đăng kí và sửa mật khẩu.
 
 ## Download App
