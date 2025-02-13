@@ -22,7 +22,7 @@ Task Manager App là một dự án quản lí công việc cho một cá nhân 
 ## Technologies Used
 
 - **Firebase**: Database và backend (FireStore và FireAuth)
-- **Flutter**: UI
+- **Dart và Flutter**: UI
 
 
 ## Android Screenshots
