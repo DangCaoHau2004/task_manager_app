@@ -1,6 +1,4 @@
-# task_manager_app
-
-A new Flutter project.
+<h2 align="center"> Task Manager App </h2>
 
 ## Getting Started
 
