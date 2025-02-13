@@ -14,43 +14,6 @@ href="https://github.com/DangCaoHau2004/task_manager_app/releases/download/v1.0.
 
 ## Android Screenshots
 
-<div style="display: flex; justify-content: space-around; margin-top: 30px">
-  <div>
-    <p align="center">Home</p>
-    <img
-      src="./snapshot/homepage.png"
-      alt=""
-      style="height: 457px; width: 206px"
-    />
-  </div>
-  <div>
-    <p align="center">Navbar Bottom Add</p>
-
-    <img
-      src="./snapshot/homepage1.png"
-      alt=""
-      style="height: 457px; width: 206px"
-    />
-
-  </div>
-  <div>
-    <p align="center">Home Drawer</p>
-
-    <img
-      src="./snapshot/homepage2.png"
-      alt=""
-      style="height: 457px; width: 206px"
-    />
-
-  </div>
-  <div>
-    <p align="center">List Task</p>
-
-    <img
-      src="./snapshot/all_task.png"
-      alt=""
-      style="height: 457px; width: 206px"
-    />
-
-  </div>
-</div>
+|                                                   HomePage                                                   |                                             Product Detail Page                                              |                                                  Cart Page                                                   |
+| :----------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: |
+| ![](https://github.com/TheAlphamerc/flutter_ecommerce_app/blob/master/screenshots/screenshot_1.jpg?raw=true) | ![](https://github.com/TheAlphamerc/flutter_ecommerce_app/blob/master/screenshots/screenshot_2.jpg?raw=true) | ![](https://github.com/TheAlphamerc/flutter_ecommerce_app/blob/master/screenshots/screenshot_3.jpg?raw=true) |
