@@ -216,12 +216,15 @@ class _EditTableState extends ConsumerState<EditTable> {
           .set(
         {
           "table_name": _entertableName,
-          "start_date": _enterStartDate,
-          "end_date": _enterEndDate,
-          "start_time": _enterStartTime,
-          "end_time": _enterEndTime,
+          "start_date": _enterStartDate == "No date" ? null : _enterStartDate,
+          "end_date": _enterEndDate == "No date" ? null : _enterEndDate,
+          "start_time": _enterStartTime == "No time" ? null : _enterStartTime,
+          "end_time": _enterEndTime == "No time" ? null : _enterEndTime,
           "create_at": DateTime.now(),
         },
+        SetOptions(
+          merge: true,
+        ),
       );
 // thêm hoạt động vào db
       // gửi thông báo cho toàn bộ user trong task

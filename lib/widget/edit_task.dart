@@ -108,12 +108,15 @@ class _EditTaskState extends ConsumerState<EditTask> {
         {
           "task_name": _enterTaskName,
           "visibility": _enterVisibility,
-          "start_date": _enterStartDate,
-          "end_date": _enterEndDate,
-          "start_time": _enterStartTime,
-          "end_time": _enterEndTime,
+          "start_date": _enterStartDate == "No date" ? null : _enterStartDate,
+          "end_date": _enterEndDate == "No date" ? null : _enterEndDate,
+          "start_time": _enterStartTime == "No time" ? null : _enterStartTime,
+          "end_time": _enterEndTime == "No time" ? null : _enterEndTime,
           "create_at": DateTime.now(),
         },
+        SetOptions(
+          merge: true,
+        ),
       );
 // thêm thông báo động vào db
       setState(
