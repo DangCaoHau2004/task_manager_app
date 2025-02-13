@@ -2,7 +2,7 @@
 
 ## Overview
 
-Task Manager App là một dự án quản lí công việc cho một cá nhân hoặc một tổ chức. Giúp cho người dùng quản lí công việc một cách hiệu quả.
+Task Manager App là một dự án quản lí công việc cho một cá nhân hoặc một tổ chứcgit. Giúp cho người dùng quản lí công việc một cách hiệu quả.
 
 ## Features
 
@@ -21,36 +21,42 @@ Task Manager App là một dự án quản lí công việc cho một cá nhân 
 
 ## Android Screenshots
 
-<div style="display: flex; justify-content: space-around; margin-top: 30px; flex-wrap: wrap; margin-bottom: 50px;">
-  <div style="text-align: center; margin: 10px;">
-    <h3>Home</h3>
-    <img src="https://github.com/DangCaoHau2004/task_manager_app/blob/master/screenshots/homepage.png?raw=true" alt="" style="height: 457px; width: 206px"/>
-  </div>
-  <div style="text-align: center; margin: 10px;">
-    <h3>Navbar Bottom Add</h3>
-    <img src="https://github.com/DangCaoHau2004/task_manager_app/blob/master/screenshots/homepage1.png?raw=true" alt="" style="height: 457px; width: 206px"/>
-  </div>
-  <div style="text-align: center; margin: 10px;">
-    <h3>Home Drawer</h3>
-    <img src="https://github.com/DangCaoHau2004/task_manager_app/blob/master/screenshots/homepage2.png?raw=true" alt="" style="height: 457px; width: 206px"/>
-  </div>
-  <div style="text-align: center; margin: 10px;">
-    <h3>List Task</h3>
-    <img src="https://github.com/DangCaoHau2004/task_manager_app/blob/master/screenshots/all_task.png?raw=true" alt="" style="height: 457px; width: 206px"/>
-  </div>
-   <div style="text-align: center; margin: 10px;">
-    <h3>Detail Task</h3>
-    <img src="https://github.com/DangCaoHau2004/task_manager_app/blob/master/screenshots/detail_task.png?raw=true" alt="" style="height: 457px; width: 206px"/>
-  </div>
-  <div style="text-align: center; margin: 10px;">
-    <h3>Notification</h3>
-    <img src="https://github.com/DangCaoHau2004/task_manager_app/blob/master/screenshots/notif.png?raw=true" alt="" style="height: 457px; width: 206px"/>
-  </div>
-  <div style="text-align: center; margin: 10px;">
-    <h3>Profile</h3>
-    <img src="https://github.com/DangCaoHau2004/task_manager_app/blob/master/screenshots/profile.png?raw=true" alt="" style="height: 457px; width: 206px"/>
-  </div>
-</div>
+<table style="width: 100%; margin-top: 30px; margin-bottom: 50px;">
+  <tr>
+    <td style="text-align: center; padding: 10px;">
+      <h3>Home</h3>
+      <img src="https://github.com/DangCaoHau2004/task_manager_app/blob/master/screenshots/homepage.png?raw=true" alt="" style="height: 457px; width: 206px"/>
+    </td>
+    <td style="text-align: center; padding: 10px;">
+      <h3>Navbar Bottom Add</h3>
+      <img src="https://github.com/DangCaoHau2004/task_manager_app/blob/master/screenshots/homepage1.png?raw=true" alt="" style="height: 457px; width: 206px"/>
+    </td>
+    <td style="text-align: center; padding: 10px;">
+      <h3>Home Drawer</h3>
+      <img src="https://github.com/DangCaoHau2004/task_manager_app/blob/master/screenshots/homepage2.png?raw=true" alt="" style="height: 457px; width: 206px"/>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: center; padding: 10px;">
+      <h3>List Task</h3>
+      <img src="https://github.com/DangCaoHau2004/task_manager_app/blob/master/screenshots/all_task.png?raw=true" alt="" style="height: 457px; width: 206px"/>
+    </td>
+    <td style="text-align: center; padding: 10px;">
+      <h3>Detail Task</h3>
+      <img src="https://github.com/DangCaoHau2004/task_manager_app/blob/master/screenshots/detail_task.png?raw=true" alt="" style="height: 457px; width: 206px"/>
+    </td>
+    <td style="text-align: center; padding: 10px;">
+      <h3>Notification</h3>
+      <img src="https://github.com/DangCaoHau2004/task_manager_app/blob/master/screenshots/notif.png?raw=true" alt="" style="height: 457px; width: 206px"/>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: center; padding: 10px;" colspan="3">
+      <h3>Profile</h3>
+      <img src="https://github.com/DangCaoHau2004/task_manager_app/blob/master/screenshots/profile.png?raw=true" alt="" style="height: 457px; width: 206px"/>
+    </td>
+  </tr>
+</table>
 
 ## Getting Started
 
