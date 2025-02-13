@@ -16,12 +16,12 @@ class ProfileScreen extends ConsumerStatefulWidget {
 class _ProFileScreenState extends ConsumerState<ProfileScreen> {
   void _editProfile() async {
     final res = await showModalBottomSheet(
+      useSafeArea: true,
+      isScrollControlled: true,
       context: context,
       builder: (context) {
         return const EditProfile();
       },
-      useSafeArea: true,
-      isScrollControlled: true,
     );
     if (res != null) {
       ScaffoldMessenger.of(context).clearSnackBars();
@@ -129,7 +129,9 @@ class _ProFileScreenState extends ConsumerState<ProfileScreen> {
                     color: Colors.grey,
                   ),
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      navigatorToPolicy(context);
+                    },
                     icon: const Row(
                       children: [
                         Icon(

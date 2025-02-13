@@ -74,7 +74,7 @@ class _EditProfileState extends ConsumerState<EditProfile> {
             bottom: keyboardSpace + 16,
           ),
           width: double.infinity,
-          child: ListView(
+          child: Column(
             children: [
               const Text(
                 "Edit profile",
