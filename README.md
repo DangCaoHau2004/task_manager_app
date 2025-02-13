@@ -19,6 +19,12 @@ Task Manager App là một dự án quản lí công việc cho một cá nhân 
   <img src="https://playerzon.com/asset/download.png" width="200"/>
 </a>
 
+## Technologies Used
+
+- **Firebase**: Database và backend (FireStore và FireAuth)
+- **Flutter**: UI
+
+
 ## Android Screenshots
   HomePage                 |   Navbar Bottom Add        |  Home Drawer
 :-------------------------:|:-------------------------:|:-------------------------:
