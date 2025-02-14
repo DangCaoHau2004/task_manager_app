@@ -30,6 +30,8 @@ class _AddUserState extends ConsumerState<AddUser> {
   String _selectedRole = "Member";
   var _isLoading = false;
   void _addUserToTask() async {
+    FocusScope.of(context).unfocus();
+
     if (_formkey.currentState!.validate()) {
       setState(() {
         _isLoading = true;

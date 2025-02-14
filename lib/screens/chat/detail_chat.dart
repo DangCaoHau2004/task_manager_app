@@ -20,6 +20,8 @@ class _DetailChatState extends ConsumerState<DetailChat> {
   final _commentController = TextEditingController();
   // Hàm gửi tin nhắn
   void _addMessage(String idChat) async {
+    FocusScope.of(context).unfocus();
+
     if (_keyCommentForm.currentState!.validate()) {
       _keyCommentForm.currentState!.save();
       try {

@@ -102,6 +102,8 @@ class _ListFriendState extends ConsumerState<ListFriend> {
   }
 
   void _searchElement(Function setStateModal) {
+    FocusScope.of(context).unfocus();
+
     final isValid = _formSearchKey.currentState!.validate();
     if (!isValid) {
       setStateModal(() {

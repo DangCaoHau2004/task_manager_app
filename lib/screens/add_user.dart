@@ -35,6 +35,8 @@ class _AddUserScreenState extends ConsumerState<AddUserScreen> {
   final _formSearchKey = GlobalKey<FormState>();
   String _enterSearch = "";
   void _searchElement() async {
+    FocusScope.of(context).unfocus();
+
     final validate = _formSearchKey.currentState!.validate();
     if (!validate) {
       setState(() {

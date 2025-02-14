@@ -26,6 +26,8 @@ class _AddTaskState extends ConsumerState<AddTask> {
 // tạo task
   void _createTask() async {
     FocusScope.of(context).unfocus();
+
+    FocusScope.of(context).unfocus();
     final validate = _formkey.currentState!.validate();
     if (!validate) {
       return;

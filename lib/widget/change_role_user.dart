@@ -45,6 +45,8 @@ class _ChangeRoleUserState extends ConsumerState<ChangeRoleUser> {
   }
 
   void _changeRoleUser() async {
+    FocusScope.of(context).unfocus();
+
     if (_formKey.currentState!.validate()) {
       setState(() {
         _isLoading = true;

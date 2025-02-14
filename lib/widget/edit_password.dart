@@ -19,6 +19,8 @@ class _EditPasswordState extends ConsumerState<EditPassword> {
   bool _hideOldPassword = true;
   bool _hideNewPassword = true;
   void _EditPassword() async {
+    FocusScope.of(context).unfocus();
+
     setState(() {
       _isLoading = true;
     });

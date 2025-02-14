@@ -24,6 +24,8 @@ class _CommentState extends ConsumerState<Comment> {
   final _keyCommentForm = GlobalKey<FormState>();
   String _enterComment = "";
   void _addComment() async {
+    FocusScope.of(context).unfocus();
+
     setState(() {
       _isLoading = true;
     });

@@ -86,10 +86,11 @@ class _MainDrawerState extends ConsumerState<MainDrawer> {
           ListTile(
             leading: const Icon(Icons.logout),
             title: const Text("Log out"),
-            onTap: () {
+            onTap: () async {
               FocusScope.of(context).unfocus();
+              Navigator.of(context).popUntil((route) => route.isFirst);
 
-              FirebaseAuth.instance.signOut();
+              await FirebaseAuth.instance.signOut();
             },
           ),
         ],

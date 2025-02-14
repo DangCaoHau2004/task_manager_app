@@ -384,6 +384,7 @@ class _AllCardScreenState extends ConsumerState<AllCardScreen> {
   String _enterComment = "";
   var _isLoading = false;
   void _addComment() {
+    FocusScope.of(context).unfocus();
     setState(() {
       _isLoading = true;
     });

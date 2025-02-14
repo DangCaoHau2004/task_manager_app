@@ -63,6 +63,9 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
         );
       }
     } on FirebaseAuthException catch (e) {
+      setState(() {
+        _isLoading = false;
+      });
       ScaffoldMessenger.of(context).clearSnackBars();
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
@@ -70,9 +73,6 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
         ),
       );
     }
-    setState(() {
-      _isLoading = false;
-    });
   }
 
   @override
@@ -108,12 +108,11 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                       //sửa lại font đoạn này!
                       // tiêu đề của form
                       _isLogin
-                          ? Text(
+                          ? const Text(
                               "Login",
                               style: TextStyle(
                                 fontSize: 25,
                                 fontWeight: FontWeight.bold,
-                                color: Theme.of(context).canvasColor,
                               ),
                             )
                           : const Text(
@@ -139,7 +138,7 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                             return null;
                           },
                           onSaved: (value) {
-                            _enterUsername = value!;
+                            _enterUsername = value!.trim();
                           },
                         ),
 
@@ -164,7 +163,7 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                           return null;
                         },
                         onSaved: (value) {
-                          _enterEmail = value!;
+                          _enterEmail = value!.trim();
                         },
                       ),
                       // ô nhập password
@@ -199,7 +198,7 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                           return null;
                         },
                         onSaved: (value) {
-                          _enterPassword = value!;
+                          _enterPassword = value!.trim();
                         },
                         onChanged: (value) {
                           setState(() {

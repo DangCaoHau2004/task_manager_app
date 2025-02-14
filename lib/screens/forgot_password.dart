@@ -14,6 +14,8 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
   String _enterEmail = "";
   bool _isLoading = false;
   void _resetPassword() async {
+    FocusScope.of(context).unfocus();
+
     if (_keyForm.currentState!.validate()) {
       _keyForm.currentState!.save();
       try {

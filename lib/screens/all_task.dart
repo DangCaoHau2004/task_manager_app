@@ -21,6 +21,8 @@ class _AllTaskScreenState extends ConsumerState<AllTaskScreen> {
   bool _isSearchHidden = true;
 
   void _searchElement() {
+    FocusScope.of(context).unfocus();
+
     if (_formSearchKey.currentState!.validate()) {
       _formSearchKey.currentState!.save();
       navigatorToSearchResult(context, _enterSearch);
