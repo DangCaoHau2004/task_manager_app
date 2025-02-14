@@ -5,9 +5,7 @@ import 'package:task_manager_app/screens/home.dart';
 import 'package:task_manager_app/screens/login_signup.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:task_manager_app/providers/user_provider.dart';
-import 'package:task_manager_app/providers/setting.dart';
 import 'firebase_options.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/services.dart';
 
 var kColorScheme = ColorScheme.fromSeed(
@@ -100,10 +98,6 @@ class _MyAppState extends ConsumerState<_MyApp> {
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (ctx, snapshot) {
           // Load lại theme
-          SharedPreferences.getInstance().then((value) {
-            final isDarkMode = value.getBool('isDarkMode') ?? false;
-            ref.read(darkTheme.notifier).state = isDarkMode;
-          });
 
           // waiting
           if (snapshot.connectionState == ConnectionState.waiting) {
@@ -116,6 +110,7 @@ class _MyAppState extends ConsumerState<_MyApp> {
           }
           // hasData
           else if (snapshot.hasData) {
+            print("has data");
             final user = snapshot.data!;
             // truyền dữ liệu vào provider future và lấy kết quả để so sánh
             final userDataAsyncValue = ref.watch(
@@ -159,6 +154,8 @@ class _MyAppState extends ConsumerState<_MyApp> {
               },
             );
           }
+          print("login");
+
           // reset lại data user
           Future.microtask(() {
             ref.read(userData.notifier).state = {};

@@ -195,8 +195,5 @@ void navigatorToSearchResult(context, String searchElement) {
 }
 
 void navigatorToHomePage(context) {
-  Navigator.of(context).pushAndRemoveUntil(
-    MaterialPageRoute(builder: (context) => const HomeScreen()),
-    (route) => false,
-  );
+  Navigator.of(context).popUntil((route) => route.isFirst);
 }

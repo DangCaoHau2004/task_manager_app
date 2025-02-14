@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:task_manager_app/providers/setting.dart';
 import 'package:task_manager_app/widget/edit_password.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class SettingScreen extends ConsumerStatefulWidget {
   const SettingScreen({super.key});
